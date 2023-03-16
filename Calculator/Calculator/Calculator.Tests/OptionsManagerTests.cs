@@ -23,5 +23,18 @@ namespace Calculator.Tests
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
+
+            [Test]
+
+            public void MultiplyShouldMultiplyAAndB()
+            {
+                double a = 5;
+                double b = 7;
+                string expectedResult = "5 * 7 = 35";
+
+                string actualResult = OptionsManager.Multiply(a, b);
+
+                Assert.AreEqual(expectedResult, actualResult);
+            }
+        }
     }
-}
