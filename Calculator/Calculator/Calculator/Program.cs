@@ -37,8 +37,12 @@ namespace Calculator
                         case "a":
                             Console.WriteLine(OptionsManager.Add(a, b));
                             break;
-                        
-
+                    }
+                    switch (choice)
+                    {
+                        case "m":
+                            Console.WriteLine(OptionsManager.Multiply(a, b));
+                            break;
                     }
                 }
                 catch (InvalidOperationException ex)

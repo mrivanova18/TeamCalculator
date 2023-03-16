@@ -30,7 +30,9 @@ namespace Calculator
             return $"{a} + {b} = {a + b}";
         }
 
-        
-        
+        public static string Multiply(double a, double b)
+        {
+            return $"{a} * {b} = {a * b}";
+        }
     }
 }
