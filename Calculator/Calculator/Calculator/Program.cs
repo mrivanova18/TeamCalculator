@@ -10,7 +10,7 @@ namespace Calculator
             {
                 Console.Clear();
                 Console.WriteLine("Console Calculator App");
-                Console.WriteLine(new string('-', 15));
+                Console.WriteLine(new string('-', 22));
 
                 Console.Write("a = ");
                 double a = double.Parse(Console.ReadLine());
@@ -36,11 +36,16 @@ namespace Calculator
                     {
                         case "a":
                             Console.WriteLine(OptionsManager.Add(a, b));
+                            break;                 
+                        case "m":
+                            Console.WriteLine(OptionsManager.Multiply(a, b));
                             break;
                         case "d":
                             Console.WriteLine(OptionsManager.Devide(a, b));
                             break;
-
+                        case "s":
+                            Console.WriteLine(OptionsManager.Subtract(a, b));
+                            break;
                     }
                 }
                 catch (InvalidOperationException ex)

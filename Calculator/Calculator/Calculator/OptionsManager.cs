@@ -30,6 +30,16 @@ namespace Calculator
             return $"{a} + {b} = {a + b}";
         }
 
+        public static string Multiply(double a, double b)
+        {
+            return $"{a} * {b} = {a * b}";
+        }
+        
+        public static string Subtract(double a , double b)
+        {
+            return $"{a} - {b} = {a - b}";
+        }      
+
         public static string Devide(double a, double b)
         {
             if (b == 0)
@@ -41,6 +51,5 @@ namespace Calculator
                 return $"{a} / {b} = {a / b}";
             }                       
         }
-
     }
 }
