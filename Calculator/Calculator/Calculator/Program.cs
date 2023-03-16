@@ -43,6 +43,9 @@ namespace Calculator
                         case "m":
                             Console.WriteLine(OptionsManager.Multiply(a, b));
                             break;
+                        case "d":
+                            Console.WriteLine(OptionsManager.Devide(a, b));
+                            break;
                     }
                 }
                 catch (InvalidOperationException ex)
