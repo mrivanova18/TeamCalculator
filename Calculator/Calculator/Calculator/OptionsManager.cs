@@ -30,7 +30,17 @@ namespace Calculator
             return $"{a} + {b} = {a + b}";
         }
 
-        
-        
+        public static string Devide(double a, double b)
+        {
+            if (b == 0)
+            {
+                throw new InvalidOperationException("Is not divisible by zero");
+            }
+            else
+            {
+                return $"{a} / {b} = {a / b}";
+            }                       
+        }
+
     }
 }
