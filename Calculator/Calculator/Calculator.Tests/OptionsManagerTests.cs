@@ -48,5 +48,15 @@ namespace Calculator.Tests
             var ex = Assert.Throws<InvalidOperationException>(() => OptionsManager.Devide(a, b));
             Assert.AreEqual(message, ex.Message);
         }
+
+            [Test]
+            public void MultiplyShouldMultiplyAAndB()
+            {
+                double a = 5;
+                double b = 7;
+                string expectedResult = "5 * 7 = 35";
+                string actualResult = OptionsManager.Multiply(a, b);
+                Assert.AreEqual(expectedResult, actualResult);
+            }
+        }
     }
-}
