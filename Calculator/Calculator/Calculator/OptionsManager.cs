@@ -51,6 +51,7 @@ namespace Calculator
                 return $"{a} / {b} = {a / b}";
             }                       
         }
+
         public static string SumSquareRoots(double a, double b)
         {
             if (a < 0 || b < 0)
@@ -76,6 +77,11 @@ namespace Calculator
             {
                 return $"Log of {a} by base {b} = {Math.Log(a,b)}";
             }
+
+        public static string SubtractAbs(double a, double b)
+        {
+            double res = Math.Abs(a - b);
+            return $"{a} - {b} = {res}";
         }
     }
 }
