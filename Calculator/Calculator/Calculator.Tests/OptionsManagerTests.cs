@@ -150,7 +150,7 @@ namespace Calculator.Tests
         }
 
         [Test]
-        public void LogarithmShouldThrowInvalidOperationExceptionWhenBIsZeroWithMessageForB()
+        public void LogarithmShouldThrowInvalidOperationExceptionWhenBIsZeroWithMessageWhenBIsNegative()
         {
             double a = 25;
             double b = -14;
@@ -160,7 +160,7 @@ namespace Calculator.Tests
         }
 
         [Test]
-        public void LogarithmShouldThrowInvalidOperationExceptionWhenBIsZeroWithMessageForBWhenOne()
+        public void LogarithmShouldThrowInvalidOperationExceptionWhenBIsZeroWithMessageWhenBOne()
         {
             double a = 25;
             double b = 1;
