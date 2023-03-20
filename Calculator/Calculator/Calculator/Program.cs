@@ -60,6 +60,11 @@ namespace Calculator
                             break;
                         case "max":
                             Console.WriteLine(OptionsManager.Maximum(a, b));
+                        case "sqrt":
+                            Console.WriteLine(OptionsManager.SumSquareRoots(a, b));
+                            break;
+                        case "log":
+                            Console.WriteLine(OptionsManager.Logarithm(a, b));
                             break;
                     }
                 }
