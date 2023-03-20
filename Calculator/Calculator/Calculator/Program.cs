@@ -46,7 +46,7 @@ namespace Calculator
                         case "s":
                             Console.WriteLine(OptionsManager.Subtract(a, b));
                             break;
-                        case "abg":
+                        case "avg":
                             Console.WriteLine(OptionsManager.Average(a, b));
                             break;
                         case "sabs":
