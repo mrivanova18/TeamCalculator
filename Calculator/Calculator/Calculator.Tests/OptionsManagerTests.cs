@@ -58,6 +58,8 @@ namespace Calculator.Tests
                 string actualResult = OptionsManager.Multiply(a, b);
                 Assert.AreEqual(expectedResult, actualResult);
             }
+    }
+    }
 
         [Test]
         public void SubstractAbsShouldWork()
@@ -115,3 +117,4 @@ namespace Calculator.Tests
         }
     }
 }
+
