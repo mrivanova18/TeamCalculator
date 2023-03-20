@@ -51,5 +51,11 @@ namespace Calculator
                 return $"{a} / {b} = {a / b}";
             }                       
         }
+
+        public static string SubtractAbs(double a, double b)
+        {
+            double res = Math.Abs(a - b);
+            return $"{a} - {b} = {res}";
+        }
     }
 }
