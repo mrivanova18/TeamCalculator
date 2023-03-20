@@ -46,6 +46,9 @@ namespace Calculator
                         case "s":
                             Console.WriteLine(OptionsManager.Subtract(a, b));
                             break;
+                        case "abg":
+                            Console.WriteLine(OptionsManager.Average(a, b));
+                            break;
                     }
                 }
                 catch (InvalidOperationException ex)

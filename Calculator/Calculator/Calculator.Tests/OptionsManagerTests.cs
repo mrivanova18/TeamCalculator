@@ -58,5 +58,5 @@ namespace Calculator.Tests
                 string actualResult = OptionsManager.Multiply(a, b);
                 Assert.AreEqual(expectedResult, actualResult);
             }
-        }
+    }
     }

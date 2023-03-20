@@ -38,7 +38,7 @@ namespace Calculator
         public static string Subtract(double a , double b)
         {
             return $"{a} - {b} = {a - b}";
-        }      
+        }
 
         public static string Devide(double a, double b)
         {
@@ -49,7 +49,12 @@ namespace Calculator
             else
             {
                 return $"{a} / {b} = {a / b}";
-            }                       
+            }
+        }
+
+            public static string Average(double a, double b)
+            {
+                return $"{a} + {b} = ({a} + {b} / 2) ";
+            }
         }
     }
-}
