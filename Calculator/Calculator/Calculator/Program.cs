@@ -67,6 +67,9 @@ namespace Calculator
                         case "sqrt":
                             Console.WriteLine(OptionsManager.SumSquareRoots(a, b));
                             break;
+                        case "sq":
+                            Console.WriteLine(OptionsManager.SumSquare(a, b));
+                            break;
                         case "log":
                             Console.WriteLine(OptionsManager.Logarithm(a, b));
                             break;

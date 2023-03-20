@@ -71,6 +71,12 @@ namespace Calculator
             }
             return res;
         }
+        public static string SumSquare(double a, double b)
+        {
+            string res = string.Empty; 
+            res = $"{a}^2 + {b}^2 = {a*a + b*b}";           
+            return res;
+        }
 
         public static string Logarithm(double a, double b)
         {
