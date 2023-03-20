@@ -27,17 +27,17 @@ namespace Calculator
 
         public static string Add(double a, double b)
         {
-            return $"{a} + {b} = {a + b}";
+            return $"{a}+{b}={a + b}";
         }
 
         public static string Multiply(double a, double b)
         {
-            return $"{a} * {b} = {a * b}";
+            return $"{a}*{b}={a * b}";
         }
         
         public static string Subtract(double a , double b)
         {
-            return $"{a} - {b} = {a - b}";
+            return $"{a}-{b}={a - b}";
         }      
 
         public static string Devide(double a, double b)
@@ -48,14 +48,43 @@ namespace Calculator
             }
             else
             {
-                return $"{a} / {b} = {a / b}";
+                return $"{a}/{b}={a / b}";
             }                       
         }
 
         public static string SubtractAbs(double a, double b)
         {
             double res = Math.Abs(a - b);
-            return $"{a} - {b} = {res}";
+            return $"{a}-{b}={res}";
+        }
+
+        public static string DevideReminder(double a, double b)
+        {
+            if (b==0)
+            {
+                throw new InvalidOperationException("Is not divisible by zero");
+            }
+
+            double res = a % b;
+            return $"{a}/{b}={res}";
+        }
+
+        public static string Power(double a, double b)
+        {
+            double res = Math.Pow(a,b);
+            return $"{a}^{b}={res}";
+        }
+
+        public static string Minimum(double a, double b)
+        {
+            double res = Math.Min(a, b);
+            return $"Min({a},{b})={res}";
+        }
+
+        public static string Maximum(double a, double b)
+        {
+            double res = Math.Max(a, b);
+            return $"Max({a},{b})={res}";
         }
     }
 }
