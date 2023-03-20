@@ -119,6 +119,64 @@ namespace Calculator.Tests
             string actualResult = OptionsManager.Maximum(a, b);
             Assert.AreEqual(expectedResult, actualResult);
         }
+
+        [Test]
+        public void SumSquareRootsShouldThrowInvalidOperationExceptionWhenBIsZeroWithMessage()
+        {
+            double a = -5;
+            double b = 0;
+            string message = "The numbers must be positive or 0";
+            var ex = Assert.Throws<InvalidOperationException>(() => OptionsManager.SumSquareRoots(a, b));
+            Assert.AreEqual(message, ex.Message);
+        }
+
+        [Test]
+        public void SumSquareRootsShouldWork()
+        {
+            double a = 25;
+            double b = 16;
+            string actualResult = OptionsManager.SumSquareRoots(a, b);
+            Assert.AreEqual("Square root of 25 + square root of 16 = 9", actualResult);
+        }
+
+        [Test]
+        public void LogarithmShouldThrowInvalidOperationExceptionWhenBIsZeroWithMessageForA()
+        {
+            double a = -5;
+            double b = 0;
+            string message = "The number must be positive";
+            var ex = Assert.Throws<InvalidOperationException>(() => OptionsManager.Logarithm(a, b));
+            Assert.AreEqual(message, ex.Message);
+        }
+
+        [Test]
+        public void LogarithmShouldThrowInvalidOperationExceptionWhenBIsZeroWithMessageForB()
+        {
+            double a = 25;
+            double b = -14;
+            string message = "The base must be positive and different from 1";
+            var ex = Assert.Throws<InvalidOperationException>(() => OptionsManager.Logarithm(a, b));
+            Assert.AreEqual(message, ex.Message);
+        }
+
+        [Test]
+        public void LogarithmShouldThrowInvalidOperationExceptionWhenBIsZeroWithMessageForBWhenOne()
+        {
+            double a = 25;
+            double b = 1;
+            string message = "The base must be positive and different from 1";
+            var ex = Assert.Throws<InvalidOperationException>(() => OptionsManager.Logarithm(a, b));
+            Assert.AreEqual(message, ex.Message);
+        }
+
+        [Test]
+        public void LogarithmShouldWork()
+        {
+            double a = 25;
+            double b = 5;
+            string actualResult = OptionsManager.Logarithm(a, b);
+            Assert.AreEqual("Log of 25 by base 5 = 2", actualResult);
+        }
     }
 }
 
