@@ -2,7 +2,7 @@
 
 namespace Calculator
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -46,6 +46,20 @@ namespace Calculator
                         case "s":
                             Console.WriteLine(OptionsManager.Subtract(a, b));
                             break;
+                        case "sabs":
+                            Console.WriteLine(OptionsManager.SubtractAbs(a, b));
+                            break;
+                        case "dr":
+                            Console.WriteLine(OptionsManager.DevideReminder(a, b));
+                            break;
+                        case "pow":
+                            Console.WriteLine(OptionsManager.Power(a, b));
+                            break;
+                        case "min":
+                            Console.WriteLine(OptionsManager.Minimum(a, b));
+                            break;
+                        case "max":
+                            Console.WriteLine(OptionsManager.Maximum(a, b));
                         case "sqrt":
                             Console.WriteLine(OptionsManager.SumSquareRoots(a, b));
                             break;
