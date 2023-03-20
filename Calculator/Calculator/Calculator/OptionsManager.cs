@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calculator
 {
-  public static  class OptionsManager
+    public static class OptionsManager
     {
         public static string[] OptionsList = {
             "ex - Exit",
@@ -34,13 +34,11 @@ namespace Calculator
         {
             return $"{a}*{b}={a * b}";
         }
-        
-        public static string Subtract(double a , double b)
+
+        public static string Subtract(double a, double b)
         {
-            return $"{a} - {b} = {a - b}";
-        }
             return $"{a}-{b}={a - b}";
-        }      
+        }
 
         public static string Devide(double a, double b)
         {
@@ -50,29 +48,30 @@ namespace Calculator
             }
             else
             {
-                return $"{a} / {b} = {a / b}";
+                return $"{a}/{b}={a / b}";
             }
         }
 
-            public static string Average(double a, double b)
-            {
-                return $"{a} + {b} = ({a} + {b} / 2) ";
-            }
-                return $"{a}/{b}={a / b}";
-            }                       
+        public static string Average(double a, double b)
+        {
+            
+            return $"Average({a},{b})={(a+b)/2}";
         }
 
         public static string SumSquareRoots(double a, double b)
         {
+            string res = string.Empty;
             if (a < 0 || b < 0)
             {
                 throw new InvalidOperationException("The numbers must be positive or 0");
             }
             else
             {
-                return $"Square root of {a} + square root of {b} = {Math.Sqrt(a) + Math.Sqrt(b)}";               
+                res = $"Square root of {a} + square root of {b} = {Math.Sqrt(a) + Math.Sqrt(b)}";
             }
+            return res;
         }
+
         public static string Logarithm(double a, double b)
         {
             if (a <= 0)
@@ -85,8 +84,9 @@ namespace Calculator
             }
             else
             {
-                return $"Log of {a} by base {b} = {Math.Log(a,b)}";
+                return $"Log of {a} by base {b} = {Math.Log(a, b)}";
             }
+        }
 
         public static string SubtractAbs(double a, double b)
         {
@@ -96,7 +96,7 @@ namespace Calculator
 
         public static string DevideReminder(double a, double b)
         {
-            if (b==0)
+            if (b == 0)
             {
                 throw new InvalidOperationException("Is not divisible by zero");
             }
@@ -107,7 +107,7 @@ namespace Calculator
 
         public static string Power(double a, double b)
         {
-            double res = Math.Pow(a,b);
+            double res = Math.Pow(a, b);
             return $"{a}^{b}={res}";
         }
 
@@ -123,3 +123,4 @@ namespace Calculator
             return $"Max({a},{b})={res}";
         }
     }
+}

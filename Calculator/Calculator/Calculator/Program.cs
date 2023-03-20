@@ -36,7 +36,7 @@ namespace Calculator
                     {
                         case "a":
                             Console.WriteLine(OptionsManager.Add(a, b));
-                            break;                 
+                            break;
                         case "m":
                             Console.WriteLine(OptionsManager.Multiply(a, b));
                             break;
@@ -48,6 +48,7 @@ namespace Calculator
                             break;
                         case "abg":
                             Console.WriteLine(OptionsManager.Average(a, b));
+                            break;
                         case "sabs":
                             Console.WriteLine(OptionsManager.SubtractAbs(a, b));
                             break;
@@ -62,6 +63,7 @@ namespace Calculator
                             break;
                         case "max":
                             Console.WriteLine(OptionsManager.Maximum(a, b));
+                            break;
                         case "sqrt":
                             Console.WriteLine(OptionsManager.SumSquareRoots(a, b));
                             break;

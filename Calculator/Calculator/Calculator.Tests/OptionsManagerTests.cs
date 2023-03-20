@@ -8,6 +8,7 @@ namespace Calculator.Tests
         [SetUp]
         public void Setup()
         {
+
         }
 
         [Test]
@@ -28,7 +29,7 @@ namespace Calculator.Tests
             string expectedResult = "25-2=23";
             string actualResult = OptionsManager.Subtract(a, b);
             Assert.AreEqual(expectedResult, actualResult);
-        }         
+        }
 
         [Test]
         public void DevideShouldDevideAByB()
@@ -49,17 +50,15 @@ namespace Calculator.Tests
             Assert.AreEqual(message, ex.Message);
         }
 
-            [Test]
-            public void MultiplyShouldMultiplyAAndB()
-            {
-                double a = 5;
-                double b = 7;
-                string expectedResult = "5*7=35";
-                string actualResult = OptionsManager.Multiply(a, b);
-                Assert.AreEqual(expectedResult, actualResult);
-            }
-    }
-    }
+        [Test]
+        public void MultiplyShouldMultiplyAAndB()
+        {
+            double a = 5;
+            double b = 7;
+            string expectedResult = "5*7=35";
+            string actualResult = OptionsManager.Multiply(a, b);
+            Assert.AreEqual(expectedResult, actualResult);
+        }
 
         [Test]
         public void SubstractAbsShouldWork()
@@ -70,6 +69,7 @@ namespace Calculator.Tests
             string actualResult = OptionsManager.SubtractAbs(a, b);
             Assert.AreEqual(expectedResult, actualResult);
         }
+
         [Test]
         public void DevideReminderShouldWork()
         {
@@ -79,6 +79,7 @@ namespace Calculator.Tests
             string actualResult = OptionsManager.DevideReminder(a, b);
             Assert.AreEqual(expectedResult, actualResult);
         }
+
         [Test]
         public void DevideReminderShouldThrow()
         {
@@ -88,6 +89,7 @@ namespace Calculator.Tests
             var ex = Assert.Throws<InvalidOperationException>(() => OptionsManager.DevideReminder(a, b));
             Assert.AreEqual(message, ex.Message);
         }
+
         [Test]
         public void PowerShouldWork()
         {
@@ -97,6 +99,7 @@ namespace Calculator.Tests
             string actualResult = OptionsManager.Power(a, b);
             Assert.AreEqual(expectedResult, actualResult);
         }
+
         [Test]
         public void MinimumShouldWork()
         {
@@ -106,6 +109,7 @@ namespace Calculator.Tests
             string actualResult = OptionsManager.Minimum(a, b);
             Assert.AreEqual(expectedResult, actualResult);
         }
+
         [Test]
         public void MaximumShouldWork()
         {
