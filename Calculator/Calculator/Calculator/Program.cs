@@ -46,6 +46,12 @@ namespace Calculator
                         case "s":
                             Console.WriteLine(OptionsManager.Subtract(a, b));
                             break;
+                        case "sqrt":
+                            Console.WriteLine(OptionsManager.SumSquareRoots(a, b));
+                            break;
+                        case "log":
+                            Console.WriteLine(OptionsManager.Logarithm(a, b));
+                            break;
                     }
                 }
                 catch (InvalidOperationException ex)
