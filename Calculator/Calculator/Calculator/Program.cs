@@ -64,6 +64,9 @@ namespace Calculator
                         case "max":
                             Console.WriteLine(OptionsManager.Maximum(a, b));
                             break;
+                        case "sq":
+                            Console.WriteLine(OptionsManager.SumSquares(a, b));
+                            break;
                         case "sqrt":
                             Console.WriteLine(OptionsManager.SumSquareRoots(a, b));
                             break;
