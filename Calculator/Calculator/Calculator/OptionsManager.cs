@@ -51,5 +51,31 @@ namespace Calculator
                 return $"{a} / {b} = {a / b}";
             }                       
         }
+        public static string SumSquareRoots(double a, double b)
+        {
+            if (a < 0 || b < 0)
+            {
+                throw new InvalidOperationException("The numbers must be positive or 0");
+            }
+            else
+            {
+                return $"Square root of {a} + square root of {b} = {Math.Sqrt(a) + Math.Sqrt(b)}";               
+            }
+        }
+        public static string Logarithm(double a, double b)
+        {
+            if (a <= 0)
+            {
+                throw new InvalidOperationException("The number must be positive");
+            }
+            else if (b <= 0 || b == 1)
+            {
+                throw new InvalidOperationException("The base must be positive and different from 1");
+            }
+            else
+            {
+                return $"Log of {a} by base {b} = {Math.Log(a,b)}";
+            }
+        }
     }
 }
